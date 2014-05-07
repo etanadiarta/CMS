@@ -1,6 +1,7 @@
-Rails.application.routes.draw do
+# Rails.application.routes.draw do
+SimpleCms::Application.routes.draw do
   
-  root "demo#index "
+  root "demo#index"
   #get 'demo/index'
   match ':controller(/:action(/:id))', :via => :get
 
