@@ -19,4 +19,8 @@ class DemoController < ApplicationController
   def kaskus
   	redirect_to("http://www.kaskus.co.id/")
   end
+
+  def text_helpers
+    
+  end
 end
