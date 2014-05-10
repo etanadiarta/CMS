@@ -50,10 +50,12 @@ class AdminUser < ActiveRecord::Base
 	validate :username_is_allowed
 	#validate :no_new_users_on_saturday, :on => :create
 
+
 	scope :sorted, lambda { order("first_name ASC") }
 
 	def name
 		"#{first_name}"
+
 		# first_name + ' ' + last_name
 		# [first_name, last_name].join(' ')
 	end
