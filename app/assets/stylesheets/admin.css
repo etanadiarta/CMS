@@ -28,7 +28,7 @@ font-size: 0.7em; }
 .notice { height: 1.25em; padding: 0.5em; text-align: center; background: #B6D491; 
 	color: #4C2516; }
 .back-link { font-size: 0.8em; margin-bottom: 1em; }
-.form-button { text-align: center; margin: 1em 0; }
+.form-buttons { text-align: center; margin: 1em 0; }
 
 .index table { clear: both; width: 100%; }
 .index table tr td { border: 1px solid #666666; }
@@ -57,7 +57,7 @@ span.status.false { background: red; color: red; }
 #errorExplanation { width: 400px; padding: 0; margin: 0 auto 1.5em; border: 1px solid #AA0000;
 	background-color: #FFFFFF; font-size: 12px; }
 #errorExplanation h2 { font-weight: bold; font-size: 12px; padding: 5px 5px 5px 15px; margin: 0;
-	width: 380px; background-color: #AA0000; color: #FFFFFF; }
+	width: 380px; background-color: #94B26F; color: #FFFFFF; }
 #errorExplanation p { color: #333333; margin: 0; padding: 3px 0.5em; }
 #errorExplanation ul { margin-top: 0; }
 #errorExplanation ul li { list-style: square; }
