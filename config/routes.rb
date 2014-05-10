@@ -1,7 +1,6 @@
 # Rails.application.routes.draw do
 SimpleCms::Application.routes.draw do
 
-
   root "demo#index"
   get 'admin', :to => "access#index"
 
