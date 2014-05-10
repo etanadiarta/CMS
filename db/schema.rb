@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140507061245) do
+ActiveRecord::Schema.define(version: 20140510025245) do
 
   create_table "admin_user_pages_joins", id: false, force: true do |t|
     t.integer "admin_user_id"
@@ -19,13 +19,13 @@ ActiveRecord::Schema.define(version: 20140507061245) do
   end
 
   create_table "admin_users", force: true do |t|
-    t.string   "first_name",      limit: 25
-    t.string   "last_name:",      limit: 50
-    t.string   "email",           limit: 100, default: "", null: false
-    t.string   "username",        limit: 25
-    t.string   "hashed_password", limit: 40
+    t.string   "first_name",     limit: 25
+    t.string   "last_name:",     limit: 50
+    t.string   "email",          limit: 100, default: "", null: false
+    t.string   "username",       limit: 25
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "pasword_digest"
   end
 
   add_index "admin_users", ["username"], name: "index_admin_users_on_username", using: :btree

@@ -5,7 +5,7 @@ class Page < ActiveRecord::Base
 	has_and_belongs_to_many :editors, :class_name => "AdminUser"
 
 	validates_presence_of :name
-	valiates_length_of :name, :maximum => 255
+	validates_length_of :name, :maximum => 255
 	validates_presence_of :permalink
 	validates_length_of :permalink, :within => 3..25
 	#use presence_of with length_of to disallow spaces
