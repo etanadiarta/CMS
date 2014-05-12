@@ -41,5 +41,5 @@ class Page < ActiveRecord::Base
 		#or perhaps instead of destroy, you would move the a another page
 		#section.destroy
 	end
-end
+	end
 end
