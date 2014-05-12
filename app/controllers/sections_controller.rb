@@ -15,9 +15,10 @@ class SectionsController < ApplicationController
   end
 
   def new
-    @section = Section.new({:page_id => @page.id, :name => "Default"})
-    @pages = @page.subject.pages.sorted
-    @section_count = Section.count + 1
+     @section = Section.new({:name => "Default"})
+    # @section = Section.new({:page_id => @page.id, :name => "Default"})
+    # @pages = @page.subject.pages.sorted
+    # @section_count = Section.count + 1
   end
 
   def create
@@ -38,7 +39,7 @@ class SectionsController < ApplicationController
     @section = Section.find(params[:id])
     if @section.update_attributes(section_params)
       flash[:notice] = "Section update succesfully"
-      redirect_to(:action => 'show', :id => @section.id, :page_id => @page.id)
+      redirect_to(:action => 'show', :id => @section.id)
     else
     render('edit')
     end  
@@ -51,7 +52,7 @@ class SectionsController < ApplicationController
   def destroy
     section = Section.find(params[:id]).destroy 
     flash[:notice] = "Section deleted succesfully" 
-    redirect_to(:action => 'index', :page_id => @page.id)
+    redirect_to(:action => 'index')
   end
 
   private
