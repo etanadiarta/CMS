@@ -25,4 +25,20 @@ class DemoController < ApplicationController
 
   def escape_output 
   end
+
+  def make_error
+    #My guesses for 3 most commong error:
+    #render(:text => "test" # syntax error
+    #render(:text => @something.upcase) # undefined method
+    #render(:text "1" + 1) #can't convert type 
+  end
+
+  def logging
+    logger.debug("this is debug")
+    logger.info("this is info")
+    logger.warn("this is warn")
+    logger.error("this is error")
+    logger.fatal("this is fatal")
+    render(:text => "Logged")
+  end
 end
