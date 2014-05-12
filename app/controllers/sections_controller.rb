@@ -1,6 +1,6 @@
 class SectionsController < ApplicationController
   
-  # before_action :confirm_logged_in
+  before_action :confirm_logged_in
 
   layout "admin"
 
