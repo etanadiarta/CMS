@@ -58,7 +58,7 @@ class PagesController < ApplicationController
   def destroy
     page = Page.find(params[:id]).destroy 
     flash[:notice] = "Page deleted succesfully" 
-    redirect_to(:action => 'index', :subject_id => @subject_id)
+    redirect_to(:action => 'index', :subject_id => @subject.id)
   end
 
   private
