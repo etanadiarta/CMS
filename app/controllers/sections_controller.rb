@@ -5,9 +5,9 @@ class SectionsController < ApplicationController
   before_action :find_page
 
   def index
-    #@sections = @page.sections.sorted
+    @sections = @page.sections.sorted
     #@sections = Section.where(:page_id => @page.id).sorted
-    @sections = Section.sorted
+    #@sections = Section.sorted
   end
 
   def show
@@ -15,17 +15,17 @@ class SectionsController < ApplicationController
   end
 
   def new
-     @section = Section.new({:name => "Default"})
-    # @section = Section.new({:page_id => @page.id, :name => "Default"})
-    # @pages = @page.subject.pages.sorted
-    # @section_count = Section.count + 1
+    # @section = Section.new({:name => "Default"})
+     @section = Section.new({:page_id => @page.id, :name => "Default"})
+     @pages = @page.subject.pages.sorted
+     @section_count = Section.count + 1
   end
 
   def create
     @section = Section.new(section_params)
     if @section.save
       flash[:notice] = "Section created succesfully"
-      redirect_to(:action => 'index', :page_id => @page.id)
+      redirect_to(:action => 'index')
     else
       render('new')
     end
