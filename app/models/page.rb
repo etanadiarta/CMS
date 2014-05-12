@@ -42,3 +42,4 @@ class Page < ActiveRecord::Base
 		#section.destroy
 	end
 end
+end
